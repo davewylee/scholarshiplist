@@ -1,0 +1,51 @@
+獎學金
+
+1. 獎助機構
+
++-----------+-------------+-------+--------+------------------------------+
+| organizationId | organizationName| contact | contact number | isExisted |
++-----------+-------------+-------+--------+------------------------------+
+|    25570111    |   行天宮助寒獎學金  |   陳小姐   |  0912345678    |  true     |
++-------+--------+--------------------------------------------------------+
+
+
+2. 使用者
++--------+----------+----------+
+| userId | userName | password | 
++--------+----------+----------+
+|  101   | jojo123  | pass123  |
+|  102   | Nono456  | pass456  |
+|  103   | Kiki789  | pass789  |
++--------+----------+----------+
+
+
+3. 獎學金上傳紀錄
++-----------+-------+--------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| scholoarshipId   |    userId       |   scholarshipName       |  scholarshipAmount    |    updatedTime     |   StartDate   |   EndDate   |   isExpired   |      web url         |   isUpdated   |
++-----------+-------------+-------+--------+----------------------------------------------------------------------------------------+------------------------------------
+| 301          	   |      101        |      清寒獎助學金          |   50000               |  2023/12/13 05:00 p.m |  2023/05/03   | 2023/05/10  |    true       |   www.book.com.tw    |	  true     |
++-----------+-------------+-------+--------+-----------------------------------------------------------------------------------------------------------------------------------+
+
+	@Override
+	public List<Scholarship> findScholarshipByAge(Integer age) {
+		
+		return scholarships.stream().filter(scholarship -> scholarship.getAge().equals(entity))
+				.collect(toList());
+	}
+
+	@Override
+	public List<Scholarship> findScholarshipByEntityAndAge(String entity, Integer age) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Scholarship> findScholarshipByAgeAndAmount(Integer age, Integer scholarshipAmount) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	boolean updateScholarshipById(Integer scholoarshipId);
+
+
+

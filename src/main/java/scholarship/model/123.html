@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Range Picker</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="start-date">起始日期：</label>
+  <input type="date" id="start-date" name="start-date" onchange="updateEndDateRestriction()">
+
+  <label for="end-date">截止日期：</label>
+  <input type="date" id="end-date" name="end-date">
+
+  <script>
+    function updateEndDateRestriction() {
+      // 获取起始日期输入框的值
+      var startDateInput = document.getElementById('start-date');
+      var startDateValue = startDateInput.value;
+
+      // 设置截止日期输入框的最小值为起始日期
+      var endDateInput = document.getElementById('end-date');
+      endDateInput.min = startDateValue;
+
+      // 重置截止日期输入框的值，确保用户不会选择无效的截止日期
+      endDateInput.value = startDateValue;
+    }
+  </script>
+
+</body>
+</html>
