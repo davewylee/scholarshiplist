@@ -30,6 +30,7 @@
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item" href="../backend/backendmain.jsp">後台</a></li>
 						<li><a class="dropdown-item" href="./register.jsp">註冊頁</li>
+						<li><a class="dropdown-item" href="./edit.jsp">修改頁</li>
 						<li><hr class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="#">Something else here</a></li>
 					</ul></li>
